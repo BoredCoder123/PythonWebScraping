@@ -12,7 +12,7 @@
 
 from urllib.request import urlopen
 from bs4 import BeautifulSoup
-html = urlopen("https://en.wikipedia.org/wiki/Python")
+html = urlopen("https://en.wikipedia.org/wiki/Python_(programming_language)")
 bsObj = BeautifulSoup(html, 'html.parser')
 for link in bsObj.findAll("a"):
     if 'href' in link.attrs:
